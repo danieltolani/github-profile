@@ -1,11 +1,53 @@
+section.github-repo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 section.github-repo h3.card-title {
   font-size: 0.9375rem;
+  color: #ffffff;
+}
+section.github-repo .content-wrapper {
+  max-width: 80%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+}
+section.github-repo .content-wrapper .card-icons-wrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 4.6875rem;
+}
+section.github-repo .content-wrapper .card-icons-wrapper .page-number-wrapper {
+  display: flex;
+  margin: 0 3rem;
+  width: 100%;
+}
+section.github-repo .content-wrapper .card-icons-wrapper button {
+  padding: 1rem 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #D9E5D4;
+  font-size: 1rem;
+  color: #D9E5D4;
+}
+section.github-repo .content-wrapper .card-icons-wrapper button > svg.next {
+  margin-left: 0.75em;
+}
+section.github-repo .content-wrapper .card-icons-wrapper button > svg.prev {
+  margin-right: 0.75em;
 }
 section.github-repo .repo-card {
   padding: 1.375em;
   display: flex;
-  border: 2px solid blue;
+  border: 1px solid #D8DAD8;
   align-items: center;
+  background-color: #5E655D;
+  border-radius: 12px;
+  margin-top: 1.875rem;
 }
 section.github-repo .repo-card .repo-logo {
   border: 1px solid #d8dad8;
@@ -14,7 +56,6 @@ section.github-repo .repo-card .repo-logo {
 }
 section.github-repo .repo-card .repo-details {
   margin-left: 1.375em;
-  border: 2px solid red;
 }
 section.github-repo .repo-card .repo-details > h1 {
   font-size: 3rem;
@@ -25,6 +66,7 @@ section.github-repo .repo-card .repo-details > h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
+  margin-bottom: 0.4em;
 }
 section.github-repo .repo-card .repo-details a {
   color: #CEBFA7;

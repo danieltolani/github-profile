@@ -6,15 +6,28 @@ import '../styles/porfolio.css'
 
 const GitHubRepos = () => {
     const [repoArray, setRepoArray] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
+    const [pageNo, setPageNo] = useState(1);
+    const [page, setPage] = useState(1);
+
     useEffect(() => {
         fetch('https://api.github.com/users/danieltolani/repos')
           .then((res) => res.json())
-          .then((data) => setRepoArray(data))
+          .then((data) => {
+            setRepoArray(data)
+            setIsLoading(false)
+          } )
       }, []);
 
-      const repoPrev = repoArray.map((repoScan, index) => {
+      const perPage = 2;
+        const total = repoArray.length;
+        const pages = Math.ceil(total / perPage);
+        const skip = page * perPage - perPage;
+
+      const repoPrev = repoArray.slice(skip, skip + perPage).map((repoScan, index) => {
         // destructure the 'Repo Name' from the arrays.
         const {name} = repoScan
+
         return(
             <div className="repo-card" key= {name}>
                 <div className="repo-logo">
@@ -32,8 +45,32 @@ const GitHubRepos = () => {
       })
     return(
         <section className="github-repo">
-            <h3 className="card-title"> REPO 01 </h3>
-            {repoPrev}
+            <div className="content-wrapper">
+                <h3 className="card-title"> PAGE {page} </h3>
+                {repoPrev}
+                <div className="card-icons-wrapper">
+                    <button disabled={page<=1} aria-disabled={page<=1} className="card-icons" onClick={()=> setPage((prev) => prev - 1)}>
+                        <svg className="page-button-icon prev" xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#D9E5D4" stroke-width="3" d="M23.348 9.167 3 9.176m0 0 7.373-7.546M3 9.176l7.089 6.926"/></svg>
+                        PREV
+                    </button>
+            <div className="page-number-wrapper">
+                    {Array.from({ length: pages }, (value, index) => index + 1).map(
+          (each) => (
+            <button className="page-nav-btn" onClick={() => setPage(each)}>
+              {each}
+            </button>
+          )
+        )}
+        </div>
+
+                    <button disabled={page>=pages} aria-disabled={page>=1}  className="card-icons"  onClick={()=> setPage((prev) => prev + 1)} > 
+                    NEXT
+                    <svg className="page-button-icon next" xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none"><path stroke="#D9E5D4" stroke-width="3" d="m0 9.167 20.348.009m0 0L12.974 1.63m7.373 7.546-7.088 6.926"/></svg>
+                    </button>
+                </div>
+
+            </div>
+            
             {/* <Outlet /> */}
         </section>
     )

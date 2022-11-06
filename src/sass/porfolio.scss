@@ -1,14 +1,70 @@
 @import 'config';
 
 section.github-repo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   h3.card-title {
     font-size: 0.9375rem;
+    color: $primary-text-color ;
   }
+
+  .content-wrapper{
+    max-width: 80%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+
+    .card-icons-wrapper{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      margin-top: 4.6875rem;
+      // width: 100%;
+
+      // .card-icons:first-child{
+      //   margin-right: 16rem;
+      // }
+      
+      .page-number-wrapper{
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        display: flex;
+        margin: 0 3rem;
+        width: 100%;
+      }
+
+      button{
+        padding: 1rem 1.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid #D9E5D4;
+        font-size: 1rem;
+        color: #D9E5D4;
+
+        & > svg.next{
+          margin-left: 0.75em;
+        }
+
+        & > svg.prev{
+          margin-right: 0.75em;
+        }
+
+      }
+    }
+  }
+
   .repo-card {
     padding: 1.375em;
     display: flex;
-    border: 2px solid blue;
+    border: 1px solid #D8DAD8;
     align-items: center;
+    background-color: #5E655D;
+    border-radius: 12px;
+    margin-top: 1.875rem;
 
     .repo-logo {
       border: 1px solid #d8dad8;
@@ -18,7 +74,6 @@ section.github-repo {
 
     .repo-details{
         margin-left: 1.375em;
-        border: 2px solid red;
 
         & > h1{
             font-size: 3rem;
@@ -29,6 +84,8 @@ section.github-repo {
             overflow: hidden;
             text-overflow: ellipsis;
             text-transform: capitalize;
+            margin-bottom: 0.4em;
+
         }
 
         a{

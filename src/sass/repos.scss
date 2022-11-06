@@ -28,7 +28,7 @@ section.single-repo {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
     .repo-intro {
       display: flex;
@@ -47,10 +47,16 @@ section.single-repo {
         &>h1{
             font-size: 3rem;
             line-height: 4.87rem;
+            max-width: 400px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
+
         &>p{
             line-height: 1.5rem;
             font-size: 1rem;
+            // text-transform: capitalize;
         }
       }
     }
@@ -64,11 +70,11 @@ section.single-repo {
       .repo-data {
         display: flex;
 
-        &>svg{
-            margin-right: 1.125em;
-        }
+       
         &>h4{
             font-size: 1.125rem;
+            margin-left: 1.125em;
+
         }
       }
     }
