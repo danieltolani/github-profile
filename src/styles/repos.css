@@ -1,0 +1,65 @@
+section.single-repo {
+  color: #ffffff;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+section.single-repo button.navigate-button {
+  margin: auto;
+  border: 1px solid #D9E5D4;
+  padding: 1em 1.125em;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #D9E5D4;
+  margin-top: 2.5em;
+}
+section.single-repo button.navigate-button > svg {
+  margin-right: 0.75em;
+}
+section.single-repo .repo-card {
+  border: 2px solid blue;
+  max-width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.single-repo .repo-card .repo-intro {
+  display: flex;
+  border: 2px solid yellow;
+  align-items: center;
+}
+section.single-repo .repo-card .repo-intro .repo-logo {
+  padding: 2rem;
+  border: 1px solid #D8DAD8;
+  border-radius: 5.61468px;
+}
+section.single-repo .repo-card .repo-intro .repo-details {
+  margin-left: 1.125rem;
+}
+section.single-repo .repo-card .repo-intro .repo-details > h1 {
+  font-size: 3rem;
+  line-height: 4.87rem;
+}
+section.single-repo .repo-card .repo-intro .repo-details > p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+section.single-repo .repo-card .repo-data-s {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+section.single-repo .repo-card .repo-data-s .repo-data {
+  display: flex;
+}
+section.single-repo .repo-card .repo-data-s .repo-data > svg {
+  margin-right: 1.125em;
+}
+section.single-repo .repo-card .repo-data-s .repo-data > h4 {
+  font-size: 1.125rem;
+}
+
+/*# sourceMappingURL=repos.css.map */

@@ -1,6 +1,6 @@
 import React from "react"; 
 import { useEffect, useState } from "react";
-import { NavLink, Link, Outlet } from "react-router-dom";
+import { NavLink, Link} from "react-router-dom";
 import '../styles/porfolio.css'
 
 
@@ -34,7 +34,7 @@ const GitHubRepos = () => {
         <section className="github-repo">
             <h3 className="card-title"> REPO 01 </h3>
             {repoPrev}
-            <Outlet />
+            {/* <Outlet /> */}
         </section>
     )
 }

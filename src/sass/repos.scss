@@ -1,0 +1,76 @@
+@import '../sass/config';
+
+section.single-repo {
+    color: $primary-text-color;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+
+
+    button.navigate-button{
+        margin: auto;
+        border: 1px solid $button-color;
+        padding: 1em 1.125em;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        color: $button-color;
+        margin-top: 2.5em;
+
+        & > svg{
+            margin-right: 0.75em;
+        }
+    }
+
+  .repo-card {
+    border: 2px solid blue;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .repo-intro {
+      display: flex;
+      border: 2px solid yellow;
+      align-items: center;
+
+      .repo-logo{
+        padding: 2rem;
+        border: 1px solid #D8DAD8;
+        border-radius: 5.61468px;
+      }
+
+      .repo-details{
+        margin-left: 1.125rem;
+
+        &>h1{
+            font-size: 3rem;
+            line-height: 4.87rem;
+        }
+        &>p{
+            line-height: 1.5rem;
+            font-size: 1rem;
+        }
+      }
+    }
+
+    .repo-data-s {
+        margin-top: 3.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+
+      .repo-data {
+        display: flex;
+
+        &>svg{
+            margin-right: 1.125em;
+        }
+        &>h4{
+            font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
