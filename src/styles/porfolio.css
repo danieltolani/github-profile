@@ -1,0 +1,37 @@
+section.github-repo h3.card-title {
+  font-size: 0.9375rem;
+}
+section.github-repo .repo-card {
+  padding: 1.375em;
+  display: flex;
+  border: 2px solid blue;
+  align-items: center;
+}
+section.github-repo .repo-card .repo-logo {
+  border: 1px solid #d8dad8;
+  border-radius: 12px;
+  padding: 2.5em;
+}
+section.github-repo .repo-card .repo-details {
+  margin-left: 1.375em;
+  border: 2px solid red;
+}
+section.github-repo .repo-card .repo-details > h1 {
+  font-size: 3rem;
+  line-height: 4.875rem;
+  color: #ffffff;
+  max-width: 28.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+section.github-repo .repo-card .repo-details a {
+  color: #CEBFA7;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-underline-offset: 0.5em;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=porfolio.css.map */

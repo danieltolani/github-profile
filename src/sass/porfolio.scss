@@ -1,0 +1,44 @@
+@import 'config';
+
+section.github-repo {
+  h3.card-title {
+    font-size: 0.9375rem;
+  }
+  .repo-card {
+    padding: 1.375em;
+    display: flex;
+    border: 2px solid blue;
+    align-items: center;
+
+    .repo-logo {
+      border: 1px solid #d8dad8;
+      border-radius: 12px;
+      padding: 2.5em;
+    }
+
+    .repo-details{
+        margin-left: 1.375em;
+        border: 2px solid red;
+
+        & > h1{
+            font-size: 3rem;
+            line-height: 4.875rem;
+            color: $primary-text-color;
+            max-width: 28.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: capitalize;
+        }
+
+        a{
+            color: $link-color;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-underline-offset: 0.5em;
+            font-size: 1rem;
+        }
+    }
+    
+  }
+}
