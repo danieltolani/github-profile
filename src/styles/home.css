@@ -1,5 +1,26 @@
+@font-face {
+  font-family: "neue";
+  src: url(../fonts/Neue-Plak-Extended-Regular.f7d043f6.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "druk";
+  src: url(../fonts/Druk-Text-Wide-Bold.db9e48ee.woff) format("woff");
+}
+@font-face {
+  font-family: "integral";
+  src: url(../fonts/Integral-CF-Regular.e801d2be.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "integral";
+  src: url(../fonts/Integral-CF-ExtraBold.12e9b8ee.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
 section.home-section {
-  border: 2px solid red;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,13 +28,14 @@ section.home-section {
   padding: 5rem 4.375rem;
 }
 section.home-section aside {
-  color: #5E655D;
+  color: #5e655d;
 }
 section.home-section aside .foot-note h4 {
   font-size: 1.75em;
 }
 section.home-section aside .foot-note h5 {
   font-size: 1.25rem;
+  font-weight: 400;
 }
 section.home-section .body-content {
   text-align: center;
@@ -24,13 +46,14 @@ section.home-section .body-content .avatar-wrapper img.avatar-img {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #CBDDEE;
+  background-color: #cbddee;
 }
 section.home-section .body-content h1 {
   text-transform: uppercase;
-  color: #D9E5D4;
+  color: #d9e5d4;
   margin-top: 1rem;
   margin-bottom: 0.8rem;
+  font-family: "integral";
 }
 section.home-section .body-content p {
   max-width: 30em;
@@ -38,16 +61,24 @@ section.home-section .body-content p {
   line-height: 24px;
   font-size: 1rem;
   margin-bottom: 3rem;
-  color: #D9E5D4;
+  color: #d9e5d4;
 }
 section.home-section .body-content a {
-  color: #D9E5D4;
+  color: #d9e5d4;
   text-decoration: none;
-  border: 1px solid #D9E6D4;
+  border: 1px solid #d9e6d4;
   padding: 1rem 1.125rem;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
+  font-family: "druk";
+}
+
+@media (hover: hover) and (pointer: fine) {
+  section.home-section .body-content:hover a {
+    background-color: #CEBFA7;
+    color: #3E463D;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

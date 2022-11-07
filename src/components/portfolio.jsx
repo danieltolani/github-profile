@@ -1,6 +1,6 @@
 import React from "react"; 
 import { useEffect, useState } from "react";
-import { NavLink, Link} from "react-router-dom";
+import { NavLink, Link, useNavigate} from "react-router-dom";
 import '../styles/porfolio.css'
 
 
@@ -9,6 +9,7 @@ const GitHubRepos = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [pageNo, setPageNo] = useState(1);
     const [page, setPage] = useState(1);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('https://api.github.com/users/danieltolani/repos')
@@ -46,7 +47,10 @@ const GitHubRepos = () => {
     return(
         <section className="github-repo">
             <div className="content-wrapper">
+              <div className="page-name-buttons">
+                <h3 onClick={()=> navigate('/')} className="card-title button">GO BACK</h3>
                 <h3 className="card-title"> PAGE {page} </h3>
+              </div>
                 {repoPrev}
                 <div className="card-icons-wrapper">
                     <button disabled={page<=1} aria-disabled={page<=1} className="card-icons" onClick={()=> setPage((prev) => prev - 1)}>

@@ -1,7 +1,30 @@
+@font-face {
+  font-family: "neue";
+  src: url(../fonts/Neue-Plak-Extended-Regular.f7d043f6.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "druk";
+  src: url(../fonts/Druk-Text-Wide-Bold.db9e48ee.woff) format("woff");
+}
+@font-face {
+  font-family: "integral";
+  src: url(../fonts/Integral-CF-Regular.e801d2be.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "integral";
+  src: url(../fonts/Integral-CF-ExtraBold.12e9b8ee.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: neue;
 }
 
 body {

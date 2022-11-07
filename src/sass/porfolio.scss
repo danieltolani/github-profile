@@ -8,6 +8,7 @@ section.github-repo {
   h3.card-title {
     font-size: 0.9375rem;
     color: $primary-text-color ;
+    font-family: 'druk';
   }
 
   .content-wrapper{
@@ -16,6 +17,14 @@ section.github-repo {
     display: flex;
     flex-direction: column;
 
+    .page-name-buttons{
+      display: flex;
+      justify-content: space-between;
+
+      & > h3.button{
+        cursor: pointer;
+      }
+    }
     .card-icons-wrapper{
       margin: 0 auto;
       display: flex;
@@ -44,6 +53,8 @@ section.github-repo {
         border: 1px solid #D9E5D4;
         font-size: 1rem;
         color: #D9E5D4;
+        font-family: 'druk';
+        cursor: pointer;
 
         & > svg.next{
           margin-left: 0.75em;
@@ -97,5 +108,23 @@ section.github-repo {
         }
     }
     
+  }
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+  section.github-repo {
+  
+    .content-wrapper{
+  
+      .card-icons-wrapper{
+  
+        button:hover{
+          background-color: #CEBFA7;
+          color: #3E463D;
+        }
+      }
+    }
   }
 }

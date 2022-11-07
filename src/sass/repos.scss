@@ -51,6 +51,8 @@ section.single-repo {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-family: 'druk' !important;
+            border: 2px solid red;
         }
 
         &>p{
