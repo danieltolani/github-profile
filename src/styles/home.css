@@ -1,3 +1,53 @@
-
+section.home-section {
+  border: 2px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5rem 4.375rem;
+}
+section.home-section aside {
+  color: #5E655D;
+}
+section.home-section aside .foot-note h4 {
+  font-size: 1.75em;
+}
+section.home-section aside .foot-note h5 {
+  font-size: 1.25rem;
+}
+section.home-section .body-content {
+  text-align: center;
+  margin: auto auto;
+}
+section.home-section .body-content .avatar-wrapper img.avatar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #CBDDEE;
+}
+section.home-section .body-content h1 {
+  text-transform: uppercase;
+  color: #D9E5D4;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+section.home-section .body-content p {
+  max-width: 30em;
+  margin: 0 auto;
+  line-height: 24px;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  color: #D9E5D4;
+}
+section.home-section .body-content a {
+  color: #D9E5D4;
+  text-decoration: none;
+  border: 1px solid #D9E6D4;
+  padding: 1rem 1.125rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=home.css.map */
