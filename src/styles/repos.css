@@ -22,9 +22,13 @@
 }
 section.single-repo {
   color: #ffffff;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+section.single-repo .repo-card-wrapper {
+  margin: auto auto;
 }
 section.single-repo button.navigate-button {
   margin: auto;
@@ -35,20 +39,27 @@ section.single-repo button.navigate-button {
   align-items: center;
   color: #D9E5D4;
   margin-top: 2.5em;
+  background-color: transparent;
+  font-family: "druk";
+  cursor: pointer;
 }
 section.single-repo button.navigate-button > svg {
   margin-right: 0.75em;
 }
 section.single-repo .repo-card {
-  border: 2px solid blue;
+  border: 1px solid #D8DAD8;
   max-width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: #5E655D;
+  border-radius: 12px;
+  padding: 1.375em;
+  padding-bottom: 4rem;
+  min-width: 52rem;
 }
 section.single-repo .repo-card .repo-intro {
   display: flex;
-  border: 2px solid yellow;
   align-items: center;
 }
 section.single-repo .repo-card .repo-intro .repo-logo {
@@ -66,8 +77,6 @@ section.single-repo .repo-card .repo-intro .repo-details > h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "druk" !important;
-  border: 2px solid red;
 }
 section.single-repo .repo-card .repo-intro .repo-details > p {
   line-height: 1.5rem;
@@ -81,10 +90,22 @@ section.single-repo .repo-card .repo-data-s {
 }
 section.single-repo .repo-card .repo-data-s .repo-data {
   display: flex;
+  align-items: center;
 }
 section.single-repo .repo-card .repo-data-s .repo-data > h4 {
   font-size: 1.125rem;
   margin-left: 1.125em;
+  max-width: 20rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  section.single-repo button.navigate-button:hover {
+    background-color: #CEBFA7;
+    color: #3E463D;
+  }
 }
 
 /*# sourceMappingURL=repos.css.map */
